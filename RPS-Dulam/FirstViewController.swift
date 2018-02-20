@@ -10,6 +10,11 @@ import UIKit
 
 class FirstViewController: UIViewController {
 
+    @IBOutlet weak var player1tab: UITabBarItem!
+    @IBOutlet weak var player1: UITextField!
+    @IBAction func player1type(_ sender: UITextField) {
+        player1tab.title = player1.text!
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
