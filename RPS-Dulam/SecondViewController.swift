@@ -89,10 +89,12 @@ class SecondViewController: UIViewController {
         AppDelegate.model.choosePlayer2(pick: .Spock)
         msg.text = "You have selected \(AppDelegate.model.player2)!, change if you want."
     }
-    @IBAction func SCBA(_ sender: UIButton) {
+   
+    @IBAction func ScissorsA(_ sender: UIButton) {
         AppDelegate.model.choosePlayer2(pick: .Scissor)
         msg.text = "You have selected \(AppDelegate.model.player2)!, change if you want."
     }
+    
     
 }
 

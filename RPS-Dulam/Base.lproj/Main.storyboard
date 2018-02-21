@@ -203,7 +203,7 @@
                                 <rect key="frame" x="102" y="373" width="171" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.49167452744011175" blue="0.64681266505099266" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="New Game"/>
+                                <state key="normal" title="Play Again"/>
                                 <connections>
                                     <action selector="NewGameA:" destination="Q60-Qi-jvY" eventType="touchUpInside" id="qIc-Hh-cOI"/>
                                     <segue destination="49e-Tb-3d3" kind="show" id="uxT-zG-sFf"/>
@@ -268,7 +268,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Webp.net-resizeimage (1)"/>
                                 <connections>
-                                    <action selector="Scissors:" destination="9pv-A4-QxB" eventType="touchUpInside" id="eJQ-Ju-oqS"/>
+                                    <action selector="ScissorsA:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="eRo-IR-M0h"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oq7-ZH-dim">
