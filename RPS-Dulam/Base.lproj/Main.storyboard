@@ -29,28 +29,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Make a selection" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gJd-hC-20q">
+                                <rect key="frame" x="16" y="79" width="353" height="153"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bUe-qf-MVV">
-                                <rect key="frame" x="109" y="252" width="126" height="81"/>
+                                <rect key="frame" x="62" y="264" width="126" height="81"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Webp.net-resizeimage (1)"/>
                                 <connections>
-                                    <action selector="Scissors:" destination="9pv-A4-QxB" eventType="touchUpInside" id="E9I-mw-lIv"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x10-Sh-TYy">
-                                <rect key="frame" x="132" y="383" width="89" height="59"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="Webp.net-resizeimage (3)"/>
-                                <connections>
-                                    <action selector="RockA:" destination="9pv-A4-QxB" eventType="touchUpInside" id="c3y-WD-Ufo"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uhp-z6-4VK">
-                                <rect key="frame" x="109" y="489" width="135" height="71"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="Webp.net-resizeimage (2)"/>
-                                <connections>
-                                    <action selector="PaperA:" destination="9pv-A4-QxB" eventType="touchUpInside" id="EN4-nJ-1o3"/>
+                                    <action selector="ScissorA:" destination="9pv-A4-QxB" eventType="touchUpInside" id="rWF-mt-dAA"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter Player1 name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Bl-iS-Cvd">
@@ -70,13 +61,69 @@
                                     <action selector="Player1A:" destination="9pv-A4-QxB" eventType="editingChanged" id="kps-8K-4Fd"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Make a selection" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gJd-hC-20q">
-                                <rect key="frame" x="16" y="79" width="353" height="153"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L7t-Ry-eiB">
+                                <rect key="frame" x="237" y="378" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="21"/>
-                                <nil key="textColor"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uhp-z6-4VK">
+                                <rect key="frame" x="-10" y="467" width="180" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <state key="normal" title="Paper" image="Webp.net-resizeimage (2)">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="PaperA:" destination="9pv-A4-QxB" eventType="touchUpInside" id="85T-hR-Vfi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CBh-XY-fZB">
+                                <rect key="frame" x="174" y="467" width="109" height="89"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <state key="normal" title="Button" image="lizard1"/>
+                                <connections>
+                                    <action selector="LizzardA:" destination="9pv-A4-QxB" eventType="touchUpInside" id="LSu-oc-LgW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VAN-Ex-u4Y">
+                                <rect key="frame" x="-10" y="353" width="160" height="96"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="Rock" image="rockorg copy">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="RockA:" destination="9pv-A4-QxB" eventType="touchUpInside" id="OFD-1T-sDv"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Scissors" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TgT-Ve-vNc">
+                                <rect key="frame" x="147" y="289" width="91" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lizard" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jn1-B6-jGh">
+                                <rect key="frame" x="255" y="479" width="91" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Spock" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kiz-81-Ofb">
+                                <rect key="frame" x="255" y="403" width="91" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" red="0.0053339149746193248" green="0.0053339149746193248" blue="0.0053339149746193248" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FJi-R0-dXu">
+                                <rect key="frame" x="237" y="326" width="82" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Spock" image="spock"/>
+                                <connections>
+                                    <action selector="SpockA:" destination="9pv-A4-QxB" eventType="touchUpInside" id="kOr-a5-6OC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.97103690480000004" green="0.84482957479999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -84,12 +131,14 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Player 1" image="mario35" selectedImage="mario35" id="acW-dT-cKf"/>
                     <connections>
-                        <outlet property="pb" destination="uhp-z6-4VK" id="U27-Hn-tE2"/>
+                        <outlet property="lb" destination="CBh-XY-fZB" id="oKa-Y5-oAG"/>
+                        <outlet property="pb" destination="uhp-z6-4VK" id="sxY-j1-pcg"/>
                         <outlet property="player1" destination="EP3-xd-hvl" id="jMC-p8-xly"/>
                         <outlet property="player1tab" destination="acW-dT-cKf" id="Jnj-Sd-8Uc"/>
-                        <outlet property="rb" destination="x10-Sh-TYy" id="Tc5-d4-5YN"/>
-                        <outlet property="scb" destination="bUe-qf-MVV" id="SN4-zi-Gdb"/>
+                        <outlet property="rb" destination="VAN-Ex-u4Y" id="y30-BR-UkF"/>
+                        <outlet property="sb" destination="bUe-qf-MVV" id="Tp8-2Q-9ue"/>
                         <outlet property="sel" destination="gJd-hC-20q" id="0tu-HR-LBj"/>
+                        <outlet property="spb" destination="FJi-R0-dXu" id="qzF-Ji-kBe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
@@ -190,30 +239,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ms4-Fc-rPO">
-                                <rect key="frame" x="132" y="237" width="111" height="64"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Make a selection" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zWe-6x-Ys6">
+                                <rect key="frame" x="16" y="74" width="335" height="155"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="Webp.net-resizeimage (1)"/>
-                                <connections>
-                                    <action selector="scissorsA:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="b4S-6U-xxo"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rc0-b2-E24">
-                                <rect key="frame" x="149" y="364" width="77" height="75"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="Webp.net-resizeimage (3)"/>
-                                <connections>
-                                    <action selector="RockA:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="bGH-oq-zgg"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DmU-Vg-DNG">
-                                <rect key="frame" x="132" y="505" width="115" height="63"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="Webp.net-resizeimage (2)"/>
-                                <connections>
-                                    <action selector="PaperA:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="rVp-Gp-GXv"/>
-                                </connections>
-                            </button>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter Player2 name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k8A-Ne-lRJ">
                                 <rect key="frame" x="46" y="29" width="159" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -231,11 +263,73 @@
                                     <action selector="Sel2:" destination="8rJ-Kc-sve" eventType="editingChanged" id="cnX-db-1C9"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Make a selection" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zWe-6x-Ys6">
-                                <rect key="frame" x="16" y="74" width="335" height="155"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yiy-9f-zcK">
+                                <rect key="frame" x="81" y="176" width="126" height="81"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="21"/>
-                                <nil key="textColor"/>
+                                <state key="normal" image="Webp.net-resizeimage (1)"/>
+                                <connections>
+                                    <action selector="Scissors:" destination="9pv-A4-QxB" eventType="touchUpInside" id="eJQ-Ju-oqS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oq7-ZH-dim">
+                                <rect key="frame" x="256" y="238" width="82" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Spock" image="spock"/>
+                                <connections>
+                                    <action selector="SPBA:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="1Sp-e2-w3v"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J1y-Zx-UBD">
+                                <rect key="frame" x="9" y="379" width="180" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <state key="normal" title="Paper" image="Webp.net-resizeimage (2)">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="PaperA:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="2pd-Ev-hd5"/>
+                                    <action selector="PaperA:" destination="9pv-A4-QxB" eventType="touchUpInside" id="qi7-SK-Iuc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7KW-K2-S3S">
+                                <rect key="frame" x="193" y="379" width="109" height="89"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <state key="normal" title="Button" image="lizard1"/>
+                                <connections>
+                                    <action selector="PaperA:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="IvS-ti-88U"/>
+                                    <action selector="lb:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="wBs-I3-L2o"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tT2-mZ-hYc">
+                                <rect key="frame" x="9" y="265" width="160" height="96"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="Rock" image="rockorg copy">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="rbA:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="1DT-pG-oF9"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Scissors" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WQY-RZ-BxZ">
+                                <rect key="frame" x="166" y="201" width="91" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lizard" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5l-LF-gjD">
+                                <rect key="frame" x="274" y="391" width="91" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Spock" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pgf-P7-raa">
+                                <rect key="frame" x="274" y="315" width="91" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" red="0.0053339149750000004" green="0.0053339149750000004" blue="0.0053339149750000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -244,12 +338,14 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Player 2" image="mario35" id="cPa-gy-q4n"/>
                     <connections>
+                        <outlet property="lb" destination="7KW-K2-S3S" id="dly-Wj-akM"/>
                         <outlet property="msg" destination="zWe-6x-Ys6" id="C8P-xh-2co"/>
-                        <outlet property="pb" destination="DmU-Vg-DNG" id="Xka-hN-eej"/>
+                        <outlet property="pb" destination="J1y-Zx-UBD" id="1rm-q9-2fL"/>
                         <outlet property="player2tab" destination="cPa-gy-q4n" id="vGW-rK-lau"/>
-                        <outlet property="rb" destination="Rc0-b2-E24" id="8De-8a-7wa"/>
-                        <outlet property="scb" destination="Ms4-Fc-rPO" id="ziw-01-KK7"/>
+                        <outlet property="rb" destination="tT2-mZ-hYc" id="Ut4-qX-PUU"/>
+                        <outlet property="sb" destination="Yiy-9f-zcK" id="FcI-YX-DbB"/>
                         <outlet property="sel" destination="0H5-0o-mlL" id="EeJ-V0-J6b"/>
+                        <outlet property="spb" destination="oq7-ZH-dim" id="J5M-w7-qu4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
@@ -279,8 +375,10 @@
     <resources>
         <image name="Webp.net-resizeimage (1)" width="45" height="45"/>
         <image name="Webp.net-resizeimage (2)" width="45" height="45"/>
-        <image name="Webp.net-resizeimage (3)" width="45" height="45"/>
         <image name="Webp.net-resizeimage (7)" width="30" height="30"/>
+        <image name="lizard1" width="200" height="200"/>
         <image name="mario35" width="35" height="35"/>
+        <image name="rockorg copy" width="100" height="100"/>
+        <image name="spock" width="200" height="200"/>
     </resources>
 </document>

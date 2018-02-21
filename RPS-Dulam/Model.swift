@@ -9,15 +9,20 @@
 import Foundation
 
 enum Choice {
-    case None, Rock, Paper, Scissor
+    case None, Rock, Paper, Scissor , Spock , Lizzard
 }
 
 class Model {
     private var player1Choice:Choice
     private var player2Choice:Choice
-    var p1 : Int = 0
-    var p2 : Int = 0
-    
+    private var _p1 : Int = 0
+    private var _p2 : Int = 0
+    var p1 : Int {
+        return _p1
+    }
+    var p2 : Int {
+        return _p2
+    }
     var player1:Choice {
         return player1Choice
     }
@@ -29,13 +34,14 @@ class Model {
     init(){
         player1Choice = Choice.None
         player2Choice = Choice.None
+        
     }
     
     func reset() {
         player1Choice = Choice.None
         player2Choice = Choice.None
-        p1 = 0
-        p2 = 0
+        _p1 = 0
+        _p2 = 0
     }
     
     func haveResult() -> Bool {
@@ -49,14 +55,17 @@ class Model {
         if (player1Choice == player2Choice) {
             return "Its a Tie"
         }
-        else if ((player1Choice == Choice.Paper) && (player2Choice == Choice.Rock))
-            || ((player1Choice == Choice.Rock) && (player2Choice == Choice.Scissor))
-            || ((player1Choice == Choice.Scissor) && (player2Choice == Choice.Paper)){
-            p1 += 1
+        else if (player1Choice == Choice.Paper && ((player2Choice == Choice.Rock)||(player2Choice == Choice.Spock)))
+            || (player1Choice == Choice.Rock && ((player2Choice == Choice.Lizzard)||(player2Choice == Choice.Scissor)))
+            || (player1Choice == Choice.Scissor && ((player2Choice == Choice.Lizzard)||(player2Choice == Choice.Paper)))
+            || (player1Choice == Choice.Spock && ((player2Choice == Choice.Rock)||(player2Choice == Choice.Scissor)))
+            || (player1Choice == Choice.Lizzard && ((player2Choice == Choice.Paper)||(player2Choice == Choice.Spock)))
+        {
+            _p1 += 1
             return "Player 1 wins"
         }
         else {
-            p2 += 1
+            _p2 += 1
             return "Player 2 wins"
         }
     }

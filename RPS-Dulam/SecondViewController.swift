@@ -36,33 +36,61 @@ class SecondViewController: UIViewController {
         if AppDelegate.model.player2 == .None {
             
             msg.text = "Make a selection"
-            scb.isEnabled = true
+            spb.isEnabled = true
             rb.isEnabled = true
             pb.isEnabled = true
+            lb.isEnabled = true
+            sb.isEnabled = true
         }
         else {
             msg.text = "You have selected \(AppDelegate.model.player2)!, change if you want."
-            scb.isEnabled = false
+            spb.isEnabled = false
             rb.isEnabled = false
             pb.isEnabled = false
+            lb.isEnabled = false
+            sb.isEnabled = false
         }
     }
-    @IBOutlet weak var scb: UIButton!
-    
+    @IBOutlet weak var sb: UIButton!
     @IBOutlet weak var rb: UIButton!
     @IBOutlet weak var pb: UIButton!
-    @IBAction func scissorsA(_ sender: UIButton) {
-        AppDelegate.model.choosePlayer2(pick: .Scissor)
+    @IBOutlet weak var spb: UIButton!
+    
+    @IBOutlet weak var lb: UIButton!
+//    @IBAction func scissorsA(_ sender: UIButton) {
+//        AppDelegate.model.choosePlayer2(pick: .Scissor)
+//        msg.text = "You have selected \(AppDelegate.model.player2)!, change if you want."
+//    }
+//
+//    @IBAction func RockA(_ sender: UIButton) {
+//        AppDelegate.model.choosePlayer2(pick: .Rock)
+//        msg.text = "You have selected \(AppDelegate.model.player2)!, change if you want."
+//    }
+//
+//    @IBAction func PaperA(_ sender: UIButton) {
+//        AppDelegate.model.choosePlayer2(pick: .Paper)
+//        msg.text = "You have selected \(AppDelegate.model.player2)!, change if you want."
+//    }
+    @IBAction func PaperA(_ sender: UIButton) {
+        AppDelegate.model.choosePlayer2(pick: .Paper)
         msg.text = "You have selected \(AppDelegate.model.player2)!, change if you want."
     }
     
-    @IBAction func RockA(_ sender: UIButton) {
+    @IBAction func lb(_ sender: UIButton) {
+        AppDelegate.model.choosePlayer2(pick: .Lizzard)
+        msg.text = "You have selected \(AppDelegate.model.player2)!, change if you want."
+    }
+    
+    @IBAction func rbA(_ sender: UIButton) {
         AppDelegate.model.choosePlayer2(pick: .Rock)
         msg.text = "You have selected \(AppDelegate.model.player2)!, change if you want."
     }
-    
-    @IBAction func PaperA(_ sender: UIButton) {
-        AppDelegate.model.choosePlayer2(pick: .Paper)
+    @IBAction func SPBA(_ sender: UIButton) {
+        AppDelegate.model.choosePlayer2(pick: .Spock)
+        msg.text = "You have selected \(AppDelegate.model.player2)!, change if you want."
+    }
+    @IBAction func SCBA(_ sender: UIButton) {
+        AppDelegate.model.choosePlayer2(pick: .Scissor)
         msg.text = "You have selected \(AppDelegate.model.player2)!, change if you want."
     }
     
