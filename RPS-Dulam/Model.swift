@@ -15,6 +15,8 @@ enum Choice {
 class Model {
     private var player1Choice:Choice
     private var player2Choice:Choice
+    var p1 : Int = 0
+    var p2 : Int = 0
     
     var player1:Choice {
         return player1Choice
@@ -24,7 +26,7 @@ class Model {
         return player2Choice
     }
     
-    private init(){
+    init(){
         player1Choice = Choice.None
         player2Choice = Choice.None
     }
@@ -32,6 +34,8 @@ class Model {
     func reset() {
         player1Choice = Choice.None
         player2Choice = Choice.None
+        p1 = 0
+        p2 = 0
     }
     
     func haveResult() -> Bool {
@@ -48,9 +52,11 @@ class Model {
         else if ((player1Choice == Choice.Paper) && (player2Choice == Choice.Rock))
             || ((player1Choice == Choice.Rock) && (player2Choice == Choice.Scissor))
             || ((player1Choice == Choice.Scissor) && (player2Choice == Choice.Paper)){
+            p1 += 1
             return "Player 1 wins"
         }
         else {
+            p2 += 1
             return "Player 2 wins"
         }
     }
